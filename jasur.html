@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings Menu</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f4f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .settings-container {
+        position: relative;
+      }
+      .settings-button {
+        background-color: #3b82f6;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .settings-button:focus + .menu {
+        display: block;
+      }
+      .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 8px;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        width: 200px;
+        overflow: hidden;
+      }
+      .menu li {
+        list-style: none;
+        padding: 10px 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .menu li:hover {
+        background-color: #f1f5f9;
+      }
+      .menu li:not(:last-child) {
+        border-bottom: 1px solid #e5e7eb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="settings-container">
+      <h1>This is setting menu page</h1>
+
+      <button class="settings-button" tabindex="0">Settings</button>
+      <ul class="menu">
+        <li>Change Theme</li>
+        <li>Change Language</li>
+        <li>Privacy Settings</li>
+        <li>Log Out</li>
+      </ul>
+      <br>
+      <br>
+      <u>by Jasur</u>
+    </div>
+  </body>
+</html>
